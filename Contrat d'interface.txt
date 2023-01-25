@@ -1,0 +1,30 @@
+Chaque endpoint authentifié aura besoin d'un token d'authentification.
+Si on veut mettre en place une API Key : Chaque appel doit être authentifié par une API Key
+
+
+Location
+Auth
+X-API-KEY
+
+URI					Méthode	Requête body					Response body
+
+/login				[POST]	{"login": String, "password" : String}	Token
+/register				[POST]	
+/profil 				[GET]		{"nickname" : 	String
+							 "avatar" : 	String (url), 
+					 		 "mail.adress" : 	String(mail) }
+/users/{id}				[GET]			 
+/users 				[GET]		{"id" : 		int
+						 	"avatar" : 		String
+					 		"nickname" : 	String }
+
+/tournaments/{id} 		[POST]	{"title" : 		String			Tournaments
+/tournaments/{id} 		[DELETE]	 "date" : 		dateTime			Users 
+/tournaments/{id}			[GET]		 "gameId" : 	int				Games *
+/tournaments/{id}			[PUT]		 "game" : { "name" : String			Editors *
+									"editor" : String
+									"year" : int }
+
+/tournaments/{id}/players 	[GET]
+/tournaments/{id}/players	[POST]
+/tournaments/{id}/players	/{p.id}
